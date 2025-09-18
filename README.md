@@ -1,73 +1,57 @@
-Web Form + Webhook + Airtable + IPinfo Automation
-Overview
+# Web Form + Webhook + Airtable + IPinfo Automation
 
+## Overview
 This project is an interactive web form built with HTML, CSS, and JavaScript. It collects user data and sends it to a Make.com webhook, which processes and stores the data in Airtable. Additionally, the scenario enriches the data using the IPinfo API to obtain geolocation and other IP-related details.
 
 This setup demonstrates a fully automated workflow, including frontend data capture, backend integration, API enrichment, and automated database updates.
 
-Features
-Frontend Interface
+---
 
-Interactive form collecting 6 fields: First Name, Last Name, Email, City, Country, Phone Number.
+## Features
 
-Real-time validation for email, required fields, and proper formats.
+### Frontend Interface
+- Interactive form collecting 6 fields: First Name, Last Name, Email, City, Country, Phone Number.  
+- Real-time validation for email, required fields, and proper formats.  
+- Clean and responsive UI using HTML and CSS.  
+- Ready for integration with Webhook or backend API.  
 
-Clean and responsive UI using HTML and CSS.
+### Backend Automation (Make.com)
+- Custom webhook receives form submissions.  
+- Airtable record handling:  
+  - Each submission creates a new record.  
+  - Existing records can be updated using email as a unique identifier.  
+- HTTP request to IPinfo:  
+  - Retrieves geolocation, city, region, country, ISP, and other IP-related data.  
+  - Updates the same Airtable record with IP info.  
+- JSON parsing and text parser modules handle structured data.  
 
-Ready for integration with Webhook or backend API.
+### Airtable Database
+- Centralized storage of user submissions.  
+- Automatic updates with enriched IP information.  
+- Flexible schema for additional fields.
 
-Backend Automation (Make.com)
+---
 
-Custom webhook receives form submissions.
+## Technologies Used
+- **Frontend:** HTML, CSS, JavaScript  
+- **Automation Platform:** Make.com (webhooks, HTTP, JSON, text parser, Airtable modules)  
+- **Database:** Airtable  
+- **External API:** IPinfo.io  
+- **Version Control:** Git and GitHub  
 
-Airtable record handling:
+---
 
-Each submission creates a new record.
+## Setup Instructions
 
-Existing records can be updated using email as a unique identifier.
-
-HTTP request to IPinfo:
-
-Retrieves geolocation, city, region, country, ISP, and other IP-related data.
-
-Updates the same Airtable record with IP info.
-
-JSON parsing and text parser modules handle structured data.
-
-Airtable Database
-
-Centralized storage of user submissions.
-
-Automatic updates with enriched IP information.
-
-Flexible schema for additional fields.
-
-Technologies Used
-
-Frontend: HTML, CSS, JavaScript
-
-Automation Platform: Make.com (webhooks, HTTP, JSON, text parser, Airtable modules)
-
-Database: Airtable
-
-External API: IPinfo.io
-
-Version Control: Git and GitHub
-
-Setup Instructions
-1. Frontend
-
+### 1. Frontend
 Clone the repository:
 
+```bash
 git clone https://github.com/your-username/web-form-webhook-airtable.git
-
 
 Open index.html in your browser to test locally.
 
-Optional: Use a local server for testing (Python example):
-
-python -m http.server 8000
-
+Optional: Use a local server for testing (Python example): python -m http.server 8000
 
 Fill the form and submit. Ensure the Make.com webhook is active.
 
@@ -100,10 +84,7 @@ Create an account on IPinfo.io
 
 Copy your API token.
 
-In Make.com HTTP module, make a GET request:
-
-https://ipinfo.io/{IP}?token=YOUR_TOKEN
-
+In Make.com HTTP module, make a GET request: https://ipinfo.io/{IP}?token=YOUR_TOKEN
 
 Parse JSON and update the Airtable record.
 
@@ -134,3 +115,7 @@ Demo
 Form URL: Public Form
 
 Airtable Preview: Internal only (API connection required)
+
+
+
+
