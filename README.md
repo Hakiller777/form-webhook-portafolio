@@ -48,4 +48,69 @@ This setup demonstrates **full-stack workflow automation**, including frontend d
 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/web-form-webhook-airtable.git
+Open index.html in your browser to test locally.
 
+Optional: Use a local server for testing (Python example):
+
+bash
+Copiar código
+python -m http.server 8000
+Fill the form and submit. Ensure the Webhook is active in Make.com.
+
+Make.com Scenario
+Create a Custom Webhook in Make.com.
+
+Connect the Webhook to the form's fetch POST request.
+
+Use HTTP module to request IPinfo with API token.
+
+Use Airtable modules to create/update records based on email.
+
+Parse JSON and map data fields to Airtable columns.
+
+Airtable Setup
+Create a new base with columns:
+
+First Name, Last Name, Email, City, Country, Phone Number
+
+IP Address, City_IP, Region, Country_IP, ISP
+
+Use the Airtable API token for Make.com connection.
+
+Map form fields to Airtable columns in your scenario.
+
+IPinfo Integration
+Create an account on IPinfo.io.
+
+Copy your API Token.
+
+In Make.com HTTP module, make a GET request to:
+
+ruby
+Copiar código
+https://ipinfo.io/{IP}?token=YOUR_TOKEN
+Parse JSON and update Airtable record.
+
+How to Test
+Open the form in your browser.
+
+Fill in the fields with sample data.
+
+Submit the form.
+
+Check Make.com scenario execution.
+
+Verify that Airtable has the new or updated record with IPinfo data.
+
+Future Improvements
+Host the frontend online using GitHub Pages for public access.
+
+Add file upload capabilities.
+
+Integrate email notifications after form submission.
+
+Expand automation workflow with additional APIs.
+
+Demo
+Form URL: Public Form
+Airtable Preview: Internal only (API connection required)
