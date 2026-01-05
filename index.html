@@ -19,6 +19,34 @@
 
     <p id="response"></p>
 
+    <!-- Sección nueva: Libros (fuera del <form> para no romper el submit) -->
+    <section id="libros" aria-labelledby="libros-title">
+        <h2 id="libros-title">Libros</h2>
+
+        <!-- PLACEHOLDER: VIDEO_CORTO_SRC (ej: assets/video-corto.mp4 o URL) -->
+        <video controls preload="metadata" poster="assets/video-corto-poster.jpg">
+            <source src="assets/video-corto.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+        <!-- PLACEHOLDERS:
+             - WA_NUMBER: Reemplazar por número en formato internacional sin + (ej: 54911XXXXXXX)
+             - WA_PREFILL_TEXT: Reemplazar por texto prellenado (se debe URL-encodear)
+        -->
+        <p>
+            <a
+                href="https://wa.me/<WA_NUMBER>?text=<WA_PREFILL_TEXT_ENCODED>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >WhatsApp</a>
+        </p>
+
+        <!-- PLACEHOLDER: VIDEO_LARGO_URL (por ahora /libros/) -->
+        <p>
+            <a href="libros/">Ver video completo</a>
+        </p>
+    </section>
+
     <script src="form.js"></script>
 </body>
 </html>
