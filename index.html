@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Formulario de Datos</h1>
+
     <form id="myForm">
         <label for="nombre">Nombre</label>
         <input id="nombre" type="text" name="Nombre" placeholder="Nombre" required>
@@ -29,19 +30,9 @@
         <button type="submit">Enviar</button>
     </form>
 
-    <!-- Sección nueva: Acceso al libro (fuera del <form> para no romper el submit) -->
-    <section id="acceso-al-libro" aria-labelledby="acceso-title">
-        <h2 id="acceso-title">Acceso al libro</h2>
-        <p>El video completo se envía por WhatsApp (automatización futura). El libro se compra en Hotmart.</p>
-        <p>
-            <!-- PLACEHOLDER: HOTMART_URL_AQUI -->
-            <a href="HOTMART_URL_AQUI" target="_blank" rel="noopener noreferrer">Comprar en Hotmart</a>
-        </p>
-    </section>
-
     <p id="response"></p>
 
-    <!-- Sección nueva: Libros (fuera del <form> para no romper el submit) -->
+    <!-- Sección: Libros (fuera del <form> para no romper el submit) -->
     <section id="libros" aria-labelledby="libros-title">
         <h2 id="libros-title">Libros</h2>
 
@@ -64,11 +55,6 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >WhatsApp</a>
-        </p>
-
-        <p>
-            <!-- PLACEHOLDER: HOTMART_URL_AQUI -->
-            <a href="HOTMART_URL_AQUI" target="_blank" rel="noopener noreferrer">Comprar en Hotmart</a>
         </p>
     </section>
 
