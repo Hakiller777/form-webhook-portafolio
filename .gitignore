@@ -1,4 +1,15 @@
-
 # Visual Studio
 .vs/
+
+# Windows / general
+Thumbs.db
+*.log
+
+# macOS
+.DS_Store
+
+# Opcional (seguro y común)
+*.user
+*.suo
+
 
