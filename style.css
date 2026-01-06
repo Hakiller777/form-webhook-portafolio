@@ -29,3 +29,62 @@ button {
     cursor: pointer;
     margin-top: 10px;
 }
+
+#libros,
+#acceso-al-libro {
+    display: inline-block;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+#libros video {
+    width: 100%;
+    height: auto;
+    max-width: 720px;
+    border-radius: 10px;
+}
+
+#libros a,
+#acceso-al-libro a {
+    display: inline-block;
+    margin: 10px 6px 0;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background: #111;
+    color: #fff;
+}
+
+#libros a:hover,
+#acceso-al-libro a:hover {
+    opacity: 0.9;
+}
+
+#response {
+    margin-top: 12px;
+    min-height: 20px;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    form,
+    #libros,
+    #acceso-al-libro {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
